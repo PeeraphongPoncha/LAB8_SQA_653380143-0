@@ -10,7 +10,7 @@ package sqa.main;
  * 
  */
 
-public class TemperatureConverter {
+public class TemperatureConverter implements Converter {
 	
 	//Constructor
 	public TemperatureConverter(){
@@ -25,7 +25,7 @@ public class TemperatureConverter {
 	 * @parameter toUnit = the unit to convert the temperature value to, e.g., fahrenheit
 	 * @return the converted value
 	 */
-	
+	@Override
 	public double convert(double tempValue, String fromUnit, String toUnit) {
 		double result = 0.0;
 		

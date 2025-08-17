@@ -12,10 +12,14 @@ package sqa.main;
 
 
 public class CookingConversionCalculator {
-	
+	private Converter tempConverter;
+    private Converter massConverter;
+    private Converter liquidConverter;
 	//Constructor
-	public CookingConversionCalculator() {
-			
+	public CookingConversionCalculator(Converter temp, Converter mass, Converter liquid) {
+		this.tempConverter = temp;
+        this.massConverter = mass;
+        this.liquidConverter = liquid;
 	}
 	
 	/*
@@ -29,12 +33,6 @@ public class CookingConversionCalculator {
 	*/
 	public double convert(double value, String choice, String fromUnit, String toUnit) {
 		double result = 0.0;
-		
-		
-		TemperatureConverter tempConverter = new TemperatureConverter();
-		MassConverter massConverter = new MassConverter();
-		LiquidVolumeConverter liquidConverter = new LiquidVolumeConverter();
-		
 		
 		if (choice.equals("temperature")) {
 			result = tempConverter.convert(value, fromUnit, toUnit);

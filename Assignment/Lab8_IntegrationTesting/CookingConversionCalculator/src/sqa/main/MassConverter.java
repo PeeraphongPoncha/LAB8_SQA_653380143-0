@@ -10,7 +10,7 @@ package sqa.main;
  * 
  */
 
-public class MassConverter {
+public class MassConverter implements Converter {
 	
 	//Constructor
 	public MassConverter() {
@@ -26,6 +26,7 @@ public class MassConverter {
 	 * @parameter toUnit = the unit to convert the flour value to, e.g., gram
 	 * @return the converted value
 	 */
+	@Override
 	public double convert(double massValue, String fromUnit, String toUnit) {
 		double result = 0.0;
 		

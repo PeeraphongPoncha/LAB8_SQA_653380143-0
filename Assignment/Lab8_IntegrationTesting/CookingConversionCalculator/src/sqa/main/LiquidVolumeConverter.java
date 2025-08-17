@@ -10,7 +10,7 @@ package sqa.main;
  * 
  */
 
-public class LiquidVolumeConverter {
+public class LiquidVolumeConverter implements Converter{
 	
 	//Constructor
 	public LiquidVolumeConverter() {
@@ -25,6 +25,7 @@ public class LiquidVolumeConverter {
 	 * @parameter toUnit = the unit to convert the liquid value to, e.g., ml
 	 * @return the converted value
 	 */
+	@Override
 	public double convert(double liquidValue, String fromUnit, String toUnit) {
 		double result = 0.0;
 		
